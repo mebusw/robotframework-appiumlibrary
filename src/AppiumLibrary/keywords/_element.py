@@ -28,6 +28,14 @@ class _ElementKeywords(KeywordGroup):
             class_name = self._get_class(_platform_class_dict)
             self._click_element_by_class_name(class_name, index_or_name)
 
+    def click_table_cell(self, index_or_name):
+        """ Click button """
+        _platform_class_dict = {'ios':'UIATableCell',
+                                   'android': '???'}
+        if self._is_support_platform(_platform_class_dict):
+            class_name = self._get_class(_platform_class_dict)
+            self._click_element_by_class_name(class_name, index_or_name)
+
     def input_text(self, locator, text):
         """Types the given `text` into text field identified by `locator`.
 
